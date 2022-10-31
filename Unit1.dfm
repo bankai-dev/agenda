@@ -1,0 +1,187 @@
+﻿object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Agenda de Contatos'
+  ClientHeight = 529
+  ClientWidth = 829
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 56
+    Top = 32
+    Width = 239
+    Height = 29
+    Caption = 'Agenda de Contatos'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 54
+    Top = 141
+    Width = 84
+    Height = 13
+    Caption = 'Nome do Contato'
+  end
+  object Label3: TLabel
+    Left = 54
+    Top = 200
+    Width = 33
+    Height = 13
+    Caption = 'Celular'
+  end
+  object Observações: TLabel
+    Left = 56
+    Top = 285
+    Width = 63
+    Height = 13
+    Caption = 'Observa'#231#245'es'
+  end
+  object Label6: TLabel
+    Left = 56
+    Top = 420
+    Width = 120
+    Height = 13
+    Caption = 'Data e Hora do Cadastro'
+  end
+  object DBText1: TDBText
+    Left = 54
+    Top = 448
+    Width = 193
+    Height = 17
+    DataField = 'data'
+    DataSource = DM.dsContatos
+  end
+  object Label4: TLabel
+    Left = 448
+    Top = 32
+    Width = 90
+    Height = 13
+    Caption = 'Busca de Contatos'
+  end
+  object DBEdit1: TDBEdit
+    Left = 54
+    Top = 160
+    Width = 239
+    Height = 21
+    DataField = 'nome'
+    DataSource = DM.dsContatos
+    TabOrder = 0
+  end
+  object DBEdit2: TDBEdit
+    Left = 54
+    Top = 219
+    Width = 239
+    Height = 21
+    DataField = 'celular'
+    DataSource = DM.dsContatos
+    TabOrder = 1
+  end
+  object DBCheckBox1: TDBCheckBox
+    Left = 54
+    Top = 246
+    Width = 97
+    Height = 17
+    Caption = 'Bloqueado'
+    DataField = 'bloqueado'
+    DataSource = DM.dsContatos
+    TabOrder = 2
+  end
+  object TDBMemo: TDBMemo
+    Left = 54
+    Top = 304
+    Width = 353
+    Height = 89
+    ParentShowHint = False
+    ShowHint = False
+    TabOrder = 3
+  end
+  object DBGrid1: TDBGrid
+    Left = 448
+    Top = 78
+    Width = 344
+    Height = 401
+    DataSource = DM.dsContatos
+    TabOrder = 4
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'nome'
+        Title.Caption = 'Contatos Cadastrados'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -11
+        Title.Font.Name = 'Tahoma'
+        Title.Font.Style = [fsBold]
+        Visible = True
+      end>
+  end
+  object txtBusca: TEdit
+    Left = 448
+    Top = 51
+    Width = 344
+    Height = 21
+    TabOrder = 5
+    OnChange = txtBuscaChange
+  end
+  object Button1: TButton
+    Left = 44
+    Top = 67
+    Width = 75
+    Height = 46
+    Caption = 'Novo'
+    TabOrder = 6
+    OnClick = Button1Click
+  end
+  object Button2: TButton
+    Left = 125
+    Top = 67
+    Width = 75
+    Height = 46
+    Caption = 'Alterar'
+    TabOrder = 7
+    OnClick = Button2Click
+  end
+  object Button3: TButton
+    Left = 206
+    Top = 67
+    Width = 75
+    Height = 46
+    Caption = 'Deletar'
+    TabOrder = 8
+    OnClick = Button3Click
+  end
+  object Button4: TButton
+    Left = 623
+    Top = 485
+    Width = 75
+    Height = 44
+    Caption = 'Salvar'
+    TabOrder = 9
+    OnClick = Button4Click
+  end
+  object Button5: TButton
+    Left = 704
+    Top = 485
+    Width = 75
+    Height = 44
+    Caption = 'Cancelar'
+    TabOrder = 10
+    OnClick = Button5Click
+  end
+end
